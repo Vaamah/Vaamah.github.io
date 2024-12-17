@@ -1,43 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style>
-div{
-    background-color: black;
-}
-main{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 100px;
-    grid-gap: 10px;
-}
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@media (max-width: 800px){
-    main{
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://raw.githubusercontent.com/Vaamah/Vaamah.github.io/refs/heads/main/tlo.png') no-repeat center center/cover;
+            color: #fff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
+        header {
+            background: rgba(0, 0, 0, 0.966);
+            text-align: center;
+            padding: 1rem;
+        }
 
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            flex: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            color: #007b8e;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.911);
+            text-align: center;
+            padding: 1rem;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
- <main>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    
-</main>
+
+    <header>
+        <h1>Moje Portfolio</h1>
+    </header>
+
+
+    <div class="container">
+
+        <section class="about">
+            <img src="https://raw.githubusercontent.com/Vaamah/Vaamah.github.io/refs/heads/main/lepek.png" alt="Zdjęcie profilowe">
+            <p>SIEEEEEEMA, jestem Jakub C aka "Venomlazalus" aka "Vaamah", najlepszy gracz klocków w EZN, rozp*****le każdego 1vs1, zapraszam. Pomijając, interesuje się informatyką i technologią</p>
+        </section>
+
+
+        <section class="projects">
+            <div class="project">
+                <h3>Projekt Syzyf</h3>
+                <p>Przez 2 lata przeżyłem lekcje z panią Kazubek.</p>
+            </div>
+            <div class="project">
+                <h3>Projekt Kwadraciaż</h3>
+                <p>Mam jakoś ponad 12.5k godzin w minecraft.</p>
+            </div>
+            <div class="project">
+                <h3>Projekt Lokamc</h3>
+                <p>Sand Force comeback 2026, in Ghura we trust.</p>
+            </div>
+        </section>
+
+        <!-- Sekcja Kontakt -->
+        <section class="contact">
+            <h2>Kontakt</h2>
+            <p>Email: <a href="mailto:dimatomójidol@gmail.com">dimatomójidol@gmail.com</a></p>
+            <p>Discord:<a href="https://vaamah.github.io/"> Venomlazalus</a></p>
+        </section>
+    </div>
+
+    <!-- Stopka -->
+    <footer>
+        <p>&copy; J Lublin 100% pozdro</p>
+    </footer>
 </body>
 </html>
